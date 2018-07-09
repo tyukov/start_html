@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>checkbox and radiobutton</title>
+    <style>
+        *,
+        *::before,
+        *:after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            max-width: 600px;
+            margin: 0 auto
+        }
+        
+        h4 {
+            font-family: helvetica;
+            font-weight: 300;
+            font-family: calibri, sans-serif;
+        }
+        
+        .checkbox-1 {
+            margin-top: 21px;
+        }
+        
+        .checkbox {
+/*            padding-left: 26px;*/
+            user-select: none;
+            position: relative;
+            display: inline-flex;
+            align-items: baseline;
+        }
+        
+/* input checkbox customize */
+        .checkbox__control {
+            border: none;
+            outline: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            z-index: 3;
+        }
+        
+        .checkbox__label {
+            font-size: 18px;
+            padding-left: .55rem;
+            flex: 1
+        }
+        
+        .checkbox__box {
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: .25rem;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.08);
+            position: relative;
+            top: 2px;
+        }
+        
+        .checkbox:hover .checkbox__box {
+            border-color: #ccc
+        }
+/*        46a3de - BLUE COLOR*/
+        
+        .checkbox__control:checked + .checkbox__box {
+            background: #2c97de url(img/cd-icon-check.svg) no-repeat center;
+            border: none;
+            box-shadow: 0 0 5px rgba(44, 151, 222, .4);
+        }
+        .checkbox__control:focus + .checkbox__box {
+            box-shadow: 0 0 5px rgba(44, 151, 222, .6);
+        }
+    </style>
+</head>
+<body>
+    <h4>Features</h4>
+    <div class="checkbox-1">
+        <label class="checkbox">
+            <input class="checkbox__control" type="checkbox" name="checkbox">
+            <span class="checkbox__box">
+<!--                <span class="icon"></span>-->
+            </span>
+            <span class="checkbox__label">Display a 'Message' button on your profile</span>
+        </label>
+    </div>
+    <div class="checkbox-1">
+        <label class="checkbox">
+            <input class="checkbox__control" type="checkbox" name="checkbox">
+            <span class="checkbox__box">
+<!--                <span class="icon"></span>-->
+            </span>
+            <span class="checkbox__label">Messages will be sent to your email</span>
+        </label>
+    </div>
+    <div class="checkbox-1">
+        <label class="checkbox">
+            <input class="checkbox__control" type="checkbox" name="checkbox">
+            <span class="checkbox__box">
+<!--                <span class="icon"></span>-->
+            </span>
+            <span class="checkbox__label">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quam nostrum pariatur cumque incidunt adipisci deserunt aspernatur porro et ut eos inventore itaque, rerum magnam autem qui, quaerat architecto, tenetur.</span>
+        </label>
+    </div>
+</body>
+</html>
